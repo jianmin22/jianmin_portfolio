@@ -20,7 +20,7 @@ export default function AboutMe() {
             <br /><br />
             I have a strong interest in various technology fields, including full stack development, cybersecurity, networking, and artificial intelligence. The dynamic nature of technology continuously fascinates me, driving my commitment to regularly improve my skills. Whether troubleshooting errors or acquiring new knowledge, the satisfaction derived from overcoming challenges fuels my passion for technology.
             <br /><br />
-            I firmly believe that consistent dedication and hard work are essential to keeping pace with the rapid evolution of technology. Technology isn't just a career path for me, it's a passion that motivates me to continuously strive for improvement.
+            I firmly believe that consistent dedication and hard work are essential to keeping pace with the rapid evolution of technology. Technology isn&apos;t just a career path for me, it&apos;s a passion that motivates me to continuously strive for improvement.
             <br /><br />
             Please feel free to explore further by scrolling down and navigating around my portfolio website. Thank you once again for visiting.
           </span>
@@ -35,7 +35,7 @@ export default function AboutMe() {
       <div className="border border-white p-4 rounded-lg mb-10 mx-5">
         <div className="container flex flex-col md:flex-row justify-between items-center gap-12 px-4">
           <img src="../../images/isfj.png" alt="About Me" className="rounded-lg w-64 md:w-96" />
-          <h2 className="text-md text-white text-medium">My MBTI is ISFJ. ISFJ (Defender) is a personality type with the Introverted, Observant, Feeling, and Judging traits. These people tend to be warm and unassuming in their own steady way. They're efficient and responsible, giving careful attention to practical details in their daily lives.</h2>
+          <h2 className="text-md text-white text-medium">My MBTI is ISFJ. ISFJ (Defender) is a personality type with the Introverted, Observant, Feeling, and Judging traits. These people tend to be warm and unassuming in their own steady way. They&apos;re efficient and responsible, giving careful attention to practical details in their daily lives.</h2>
         </div>
       </div>
 

@@ -20,7 +20,7 @@ export default function Navbar() {
             <div>
                 <Link className="flex items-center gap-2 text-3xl font-semibold ml-auto" href="/">
                 <img src="../../images/navbar-doraemon-icon.png" alt="" height="40" width="40" />
-                    <span>JM' Portfolio</span>
+                    <span>JM&apos;s Portfolio</span>
                 </Link>
             </div>
             <NavigationMenu>
@@ -78,7 +78,7 @@ export default function Navbar() {
 const ListItem = React.forwardRef<
     React.ElementRef<"a">,
     React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+>(function ListItem({ className, title, children, ...props }, ref) {
     return (
         <li>
             <NavigationMenuLink asChild>
