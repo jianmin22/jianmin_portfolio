@@ -12,7 +12,7 @@ import {
 const SkillsAcquired = [
     {
         title: "HTML",
-        description: "HTML is the standard markup language for documents designed to be displayed in a web browser.",
+        description: "I have acquired this skills during my time at Singapore Polytechnic, I have developed 2 website with HTML, one is  ",
         imageSrc: "../../images/html.png"
     },
     {
@@ -43,8 +43,8 @@ const SkillsAcquired = [
     },
     {
         title: "TypeScript",
-        description: "TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.",
-        ImageSrc: "../../images/typescript.png"
+        description: "TypeScript is an open-source language which builds on JavaScript, one of the world's most used tools, by adding static type definitions.",
+        imageSrc: "../../images/typescript.png"
     },
     {
         title: "React",
@@ -59,17 +59,17 @@ const SkillsAcquired = [
     {
         title: "Firebase",
         description: "Firebase is a platform developed by Google for creating mobile and web applications.",
-        // imageSrc: "../../images/firebase.png"
+        imageSrc: "../../images/firebase.png"
     },
     {
         title: "MongoDB",
         description: "MongoDB is a source-available cross-platform document-oriented database program.",
-        // imageSrc: "../../images/mongodb.png"
+        imageSrc: "../../images/mongodb.png"
     },
     {
         title: "Node.js",
         description: "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
-        // imageSrc: "../../images/nodejs.png"
+        imageSrc: "../../images/nodejs.png"
     },
     {
         title: "C++",
@@ -90,7 +90,7 @@ const SkillsAcquired = [
     {
         title: "Figma",
         description: "Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.",
-        // imageSrc: "../../images/figma.png"
+        imageSrc: "../../images/figma.png"
     },
     {
         title:"React Native",
@@ -100,7 +100,7 @@ const SkillsAcquired = [
     {
         title:"Express JS",
         description: "Express.js, or simply Express, is a back end web application framework for Node.js.",
-        // imageSrc: "../../images/expressjs.png"
+        imageSrc: "../../images/express-js.png"
     },
     {
         title:"CockroachDB",
@@ -110,68 +110,80 @@ const SkillsAcquired = [
     {
         title:"Cyber Security",
         description: "Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks.",
-        // imageSrc: "../../images/cybersecurity.png"
+        imageSrc: "../../images/cybersecurity.png"
     },
     {
-        type:"Networking",
+        title:"Networking",
         description: "Networking is the practice of connecting computers and other devices to share resources.",
-        // imageSrc: "../../images/networking.png"
+        imageSrc: "../../images/networking.png"
     },
     {
-        type:"Database Design",
+        title:"Database Management (Data Seeding, SQL, Data Modelling)",
         description: "Database design is the organization of data according to a database model.",
-        // imageSrc: "../../images/database-design.png"
+        imageSrc: "../../images/database-management.png"
     },
     {
-        type:"MS SQL",
+        title:"MS SQL",
         description: "Microsoft SQL Server is a relational database management system developed by Microsoft.",
         imageSrc: "../../images/mssql.png"
     },
     {
-        type:"MySQL",
+        title:"MySQL",
         description: "MySQL is an open-source relational database management system.",
         imageSrc: "../../images/mysql.png"
     },
     {
-        type:"PostgreSQL",
-        description: "PostgreSQL is a free and open-source relational database management system.",
-        // imageSrc: "../../images/postgresql.png"
+        title:"JWT",
+        description: "Independently learned JSON Web Token. It is an Internet standard for creating data with optional signature and/or optional encryption whose payload holds JSON that asserts some number of claims.",
+        imageSrc: "../../images/jwt.png"
     },
     {
-        type: "Data Analysis Using Excel",
+        title: "Data Analysis Using Excel",
         description:"Microsoft Excel is a spreadsheet developed by Microsoft for Windows, macOS, Android and iOS. It features calculation, graphing tools, pivot tables, and a macro programming language called Visual Basic for Applications.",
         imageSrc: "../../images/excel.png"
     },
     {
-        type:"Prisma",  
+        title:"Prisma",  
         description: "Prisma is an open-source database toolkit.",
         imageSrc: "../../images/prisma.png"
     },
     {
-        type:"TRPC",
+        title:"TRPC",
         description: "TRPC is a modern TypeScript framework for building scalable, reliable, and type-safe APIs.",
         imageSrc: "../../images/trpc.png"
     }
 
 ]
 export function SkillsAcquiredCarousel() {
-  return (
-    <Carousel className="w-full max-w-sm">
-      <CarouselContent className="-ml-1">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-2xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
-  )
-}
+    return (
+      <Carousel className="w-full max-w-screen-xl m-10">
+        <CarouselContent className="-ml-1">
+          {SkillsAcquired.map((skill, index) => (
+            <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+              <div className="p-1">
+                <Card>
+                  <CardContent className="flex flex-col items-center p-6 h-96" >
+                    <div className="h-2/3 p-5">
+                    <img 
+                      src={skill.imageSrc} 
+                      alt={skill.title} 
+                      style={{ maxWidth: "90%", height: "auto", maxHeight: "150px" }} 
+                    />
+                    </div>
+                    <div className="m-5 h-1/3 justify-start items-start ">
+                      <h3 className="font-bold">{skill.title}</h3>
+                      <p>{skill.description}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    )
+  }
+  
+  
