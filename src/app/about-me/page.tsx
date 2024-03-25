@@ -1,6 +1,7 @@
 import { ScrollArea } from "~/components/ui/scroll-area"
 import NavBar from "~/component/navbar";
 import { SkillsAcquiredCarousel } from "~/component/skills-acquired-carousel";
+import { HobbiesCarousel } from "~/component/hobbies";
 export default function AboutMe() {
   return (
     <main className="flex min-h-screen flex-col items-center bg-gray-900">
@@ -16,11 +17,13 @@ export default function AboutMe() {
           <span className="text-md font-medium p-5 py-10 text-black text-center">
             Hello and thank you for visiting my portfolio website!
             <br /><br />
-            My name is Soh Jian Min, and I am currently Studying at Singapore Polytechnic for Diploma in Information Technology. Previously, I completed a Higher Nitec in Cyber and Network Security at ITE in 2022.
+            My name is Soh Jian Min, and I am currently Studying at Singapore Polytechnic for Diploma in Information Technology. Previously, I completed a Higher Nitec in Cyber and Network Security at ITE in 2022. Soon, I will continue to study at a university to further my studies in the field of technology.
             <br /><br />
             I have a strong interest in various technology fields, including full stack development, cybersecurity, networking, and artificial intelligence. The dynamic nature of technology continuously fascinates me, driving my commitment to regularly improve my skills. Whether troubleshooting errors or acquiring new knowledge, the satisfaction derived from overcoming challenges fuels my passion for technology.
             <br /><br />
-            I firmly believe that consistent dedication and hard work are essential to keeping pace with the rapid evolution of technology. Technology isn&apos;t just a career path for me, it&apos;s a passion that motivates me to continuously strive for improvement.
+            I firmly believe that consistent dedication and hard work are essential for keeping pace with the rapid evolution of technology. Technology isn&apos;t just a career path for me, it&apos;s a passion that motivates me to continuously strive for improvement.
+            <br /><br />
+            I am an independent learner and a responsible team player who is always willing to help others. I am also a hardworking learner which allows me to adapt to new environments and technologies quickly. I am always looking for opportunities to learn and grow, and I am excited to see where my journey in technology will take me.
             <br /><br />
             Please feel free to explore further by scrolling down and navigating around my portfolio website. Thank you once again for visiting.
           </span>
@@ -46,6 +49,12 @@ export default function AboutMe() {
         </h1>
       </div>
       <SkillsAcquiredCarousel />
+      <div className="container flex flex-col items-start gap-12 px-4 py-16">
+        <h1 className=" text-5xl font-extrabold tracking-tight pt-10 text-white sm:text-[3rem]">
+          <span className="text-red-200">My</span> H<span className="text-blue-200">ob</span>b<span className="text-emerald-100">i</span>e<span className="text-violet-200">s</span>
+        </h1>
+      </div>
+      <HobbiesCarousel />
     </main>
   );
 }
