@@ -45,13 +45,13 @@ export default function Navbar() {
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="p-4 md:w-[100px] lg:w-[300px]">
-                                <ListItem href="my_experience/timeline" title="My Timeline">
+                                <ListItem href="/my_experience/timeline" title="My Timeline">
                                     A timeline of my life journey
                                 </ListItem>
-                                <ListItem href="my-experience/projects" title="My Coding Projects">
+                                <ListItem href="/my_experience/projects" title="My Coding Projects">
                                     My significant coding projects and their details
                                 </ListItem>
-                                <ListItem href="my_experience/achievements" title="Achievements">
+                                <ListItem href="/my_experience/achievements" title="Achievements">
                                     Some of my achievements and awards
                                 </ListItem>
                                 {/* <ListItem href="my_experience/skills" title="Skills">
