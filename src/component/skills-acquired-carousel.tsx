@@ -156,7 +156,7 @@ const SkillsAcquired = [
 ]
 export function SkillsAcquiredCarousel() {
     return (
-      <Carousel className="w-full max-w-screen-xl m-10">
+      <Carousel className="w-full max-w-screen-xl m-10 overflow-hidden">
         <CarouselContent className="-ml-1">
           {SkillsAcquired.map((skill, index) => (
             <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">

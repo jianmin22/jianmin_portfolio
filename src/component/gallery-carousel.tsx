@@ -30,7 +30,7 @@ export function GalleryCarousel() {
   }, [api])
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <h1 className="text-5xl font-bold text-center p-3 text-white">
           <span className="text-red-200">This</span> <span className="text-blue-200">is</span> <span className="text-emerald-100">me</span> <span className="text-violet-200">!</span> <span className="text-yellow-100">!</span>
         </h1>
