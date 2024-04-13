@@ -12,8 +12,8 @@ export default function Timeline() {
                 </h1>
                 <div className="container mx-auto w-full h-full">
                     <ol className="relative border-s border-gray-200 dark:border-gray-700">
-                        {timeline.map((item) => (
-                            <li className="mb-10 ms-6">
+                        {timeline.map((item, key) => (
+                            <li key={key} className="mb-10 ms-6">
                                 <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                                 <Card className="w-full">
                                     <CardContent className="p-5">
