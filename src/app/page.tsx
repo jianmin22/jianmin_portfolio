@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { GalleryCarousel } from "~/component/gallery-carousel";
 import NavBar from "~/component/navbar";
 export default function HomePage() {

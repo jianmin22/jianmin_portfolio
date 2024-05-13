@@ -1,52 +1,56 @@
-import { GalleryCarousel } from "~/component/gallery-carousel";
+/* eslint-disable @next/next/no-img-element */
 import NavBar from "~/component/navbar";
+
+// Example data structure for the projects
+const projects = [
+  {
+    id: 1,
+    title: "Project 1",
+    description: "Description for Project 1",
+    githubUrl: "https://github.com/project1",
+    imageUrl: "../../images/project-1.png"
+  },
+  {
+    id: 2,
+    title: "Form Creation Website",
+    description: `A pet project done with Tailwind CSS, Croacoach DB, Next JS, Typescript, Prisma, TRPC and Next Auth. This websites allows login with either google or discord and allows form filling and saving forms. This is to prepare my knowledge on these technical stacks and implement it when i do the project for industry now curriculumn project which also uses these technical stacks.`,
+    githubUrl: "https://github.com/project2",
+    imageUrl: "../../images/project-2.png"
+  },
+  // Add more projects as needed
+];
+
 export default function Projects() {
   return (
     <main className="flex min-h-screen flex-col items-center bg-gray-900">
       <NavBar />
       <div className="container flex flex-col items-center gap-12 px-4 py-16 ">
-        <h1 className="text-5xl font-extrabold tracking-tight text-center pt-10 text-white sm:text-[5rem]">
-          <span className="text-red-200">C</span>o<span className="text-blue-200">n</span>t<span className="text-emerald-100">a</span>c<span className="text-violet-200">t </span>M<span className="text-yellow-100">e</span>
+        <h1 className="pt-10 text-center text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
+          <span className="text-red-200">M</span>y
+          <span className="text-blue-200"> Pr</span>o
+          <span className="text-emerald-100">j</span>e
+          <span className="text-violet-200">c</span>t
+          <span className="text-yellow-100">s</span>
         </h1>
-
-
-        <div className="flex justify-between mt-10 gap-12 items-center">
-          <div className="border border-white p-4 rounded-lg w-1/3 mb-10 mx-5">
-            <div className="container flex flex-col items-center gap-12 px-4">
-              <img src="../../images/email.png" alt="Email" className="rounded-full w-56 md:w-48" />
-              <h2 className="text-md text-white text-medium text-center">
-                Here is my personal email: sohjianmin123476@gmail.com. Feel free to contact me via email for any inquiries!
-                <br />
-                <br />
-                Link To Contact Me Via Email:&nbsp;
-                <a href="mailto:sohjianmin123476@gmail.com" className="text-blue-200 text-medium">Email Me</a>
-              </h2>
+        <div className="flex flex-col gap-12 mt-10 w-full">
+          {projects.map((project) => (
+            <div key={project.id} className="mx-5 mb-10 rounded-lg border border-white p-4 w-full flex flex-col md:flex-row">
+              <div className="flex justify-center items-center flex-shrink-0 w-full md:w-1/3">
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="h-48 w-auto max-w-full rounded-lg"
+                />
+              </div>
+              <div className="mt-4 md:mt-0 md:ml-4 text-white flex flex-col justify-between">
+                <h2 className="text-lg font-medium">{project.title}</h2>
+                <p>{project.description}</p>
+                <a href={project.githubUrl} className="text-blue-400 hover:text-blue-600 mt-4">
+                  GitHub Link
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="border border-white p-4 rounded-lg w-1/3 mb-10 mx-5">
-            <div className="container flex flex-col items-center gap-12 px-4">
-              <img src="../../images/linkedin.png" alt="Linkedin" className="rounded-full w-56 md:w-48" />
-              <h2 className="text-md text-white text-medium text-center">
-                Below is the link to my LinkedIn Profile. Click on it to see my profile, and please feel free to DM me or connect with me!
-                <br />
-                <br />
-                Link To My LinkedIn Profile:&nbsp;
-                <a href="https://www.linkedin.com/in/jian-min-soh-114174201/?originalSubdomain=sg" className="text-md text-blue-200 text-medium" target="_blank">Linkedin</a>
-              </h2>
-            </div>
-          </div>
-          <div className="border border-white p-4 rounded-lg w-1/3 mb-10 mx-5">
-            <div className="container flex flex-col items-center gap-12 px-4">
-              <img src="../../images/instagram.png" alt="Instagram" className="rounded-full w-56 md:w-48" />
-              <h2 className="text-md text-white text-medium text-center">
-              Below is the link to my Instagram Profile. Click on it to see my profile, and please feel free to DM me or we can follow each other!
-                <br />
-                <br />
-                Link To My Instagram Profile:&nbsp;
-                <a href="https://www.instagram.com/im_j_min?igsh=MTAybDY0OGtubGFoZg%3D%3D&utm_source=qr" className="text-md text-blue-200 text-medium" target="_blank">Instagram</a>
-              </h2>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </main>

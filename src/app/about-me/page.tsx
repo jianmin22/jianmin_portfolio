@@ -1,4 +1,4 @@
-import { ScrollArea } from "~/components/ui/scroll-area"
+/* eslint-disable @next/next/no-img-element */
 import NavBar from "~/component/navbar";
 import { SkillsAcquiredCarousel } from "~/component/skills-acquired-carousel";
 import { HobbiesCarousel } from "~/component/hobbies";
